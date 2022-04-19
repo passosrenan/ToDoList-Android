@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.FragmentCad">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/edit_titulo"
+        android:hint="Titulo"
+        android:textColorHint="@color/hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:layout_gravity="top"
+        android:textColorHint="@color/hint"
+        android:hint="Descricão"
+        android:id="@+id/edit_descricao"
+        android:inputType="textCapSentences|textMultiLine"
+        android:minLines="3"
+        android:maxLines="20"
+        android:lines="4"
+        android:layout_width="match_parent"
+        android:layout_marginTop="50dp"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:layout_marginTop="5dp"
+        android:id="@+id/button_data"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/tinit"
+        android:text="Data Prevista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/button_save"
+        android:backgroundTint="@color/tinit"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center"
+        android:text="Salvar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+</FrameLayout>

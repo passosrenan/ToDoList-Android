@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentCad">
+
+
+    <fragment
+        android:id="@+id/fragmentInicio"
+        android:name="br.senai.sp.cotia.todolist.fragment.FragmentInicio"
+        android:label="FragmentInicio" >
+        <action
+            android:id="@+id/action_fragmentInicio_to_fragmentCad"
+            app:destination="@id/fragmentCad" />
+        <action
+            android:id="@+id/action_fragmentInicio_to_fragmentDetalhes"
+            app:destination="@id/fragmentDetalhes" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentCad"
+        android:name="br.senai.sp.cotia.todolist.fragment.FragmentCad"
+        android:label="FragmentCad" />
+    <fragment
+        android:id="@+id/fragmentDetalhes"
+        android:name="br.senai.sp.cotia.todolist.fragment.FragmentDetalhes"
+        android:label="FragmentDetalhes" >
+        <action
+            android:id="@+id/action_fragmentDetalhes_to_fragmentSub"
+            app:destination="@id/fragmentSub" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentSub"
+        android:name="br.senai.sp.cotia.todolist.fragment.FragmentSub"
+        android:label="FragmentSub" />
+</navigation>
