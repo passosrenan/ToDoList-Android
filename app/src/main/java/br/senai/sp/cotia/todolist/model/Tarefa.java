@@ -1,6 +1,11 @@
 package br.senai.sp.cotia.todolist.model;
 
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity
 public class Tarefa {
+    @PrimaryKey(autoGenerate = true)
     private Long id;
     private String titulo;
     private String descricao;

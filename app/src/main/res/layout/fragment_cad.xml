@@ -2,11 +2,13 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/fundo"
     android:layout_height="match_parent"
     tools:context=".fragment.FragmentCad">
 
 
     <LinearLayout
+        android:id="@+id/line1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -31,23 +33,51 @@
         android:layout_marginTop="50dp"
         android:layout_height="wrap_content"/>
 
-    <Button
+    <!--<Button
         android:layout_marginTop="5dp"
         android:id="@+id/button_data"
         android:layout_gravity="center"
         android:backgroundTint="@color/tinit"
         android:text="Data Prevista"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"/>-->
 
-    <Button
-        android:id="@+id/button_save"
-        android:backgroundTint="@color/tinit"
-        android:layout_marginTop="5dp"
-        android:layout_gravity="center"
-        android:text="Salvar"
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="210dp"
+        android:layout_marginLeft="55dp"
+        android:id="@+id/line2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/button_data"
+            android:layout_width="wrap_content"
+            android:background="@color/fundoButton"
+            android:layout_gravity="center"
+            android:src="@drawable/calendario"
+            android:layout_height="wrap_content"/>
+
+        <!--<Button
+            android:id="@+id/button_save"
+            android:backgroundTint="@color/tinit"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center"
+            android:text="Salvar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>-->
+
+        <ImageButton
+            android:id="@+id/button_save"
+            android:layout_marginLeft="10dp"
+            android:background="@color/fundoButton"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/salvar"
+            android:layout_height="wrap_content"/>
+
 
     </LinearLayout>
 
