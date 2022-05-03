@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    android:layout_margin="10dp"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linear_tarefa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text_titulo"
+            android:layout_width="match_parent"
+            android:background="@color/back_tarefa"
+            android:layout_height="match_parent"
+            android:text="Estudar Android"
+            android:textColor="@color/cor_titulo" />
+
+        <TextView
+            android:background="@color/back_tarefa"
+            android:id="@+id/text_data"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="10/06/1990"
+            android:textColor="@color/cor_titulo" />
+
+        <TextView
+            android:id="@+id/text_status"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/cor_status"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/status_tarefa"
+            android:textColorHint="@color/black" />
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

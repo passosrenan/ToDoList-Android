@@ -163,6 +163,8 @@ public class FragmentCad extends Fragment {
         protected void onPostExecute(String msg) {
             if(msg.equals("ok")){
                 Log.w("IUPIII", "Deu certo");
+                // aciona o botão de voltar
+                getActivity().onBackPressed();
             }else{
                 Log.w("Deu ruim", msg);
                 Toast.makeText(getContext(), "Deu ruim"+msg, Toast.LENGTH_LONG).show();

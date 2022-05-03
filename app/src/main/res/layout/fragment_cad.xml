@@ -13,27 +13,27 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/edit_titulo"
-        android:hint="Titulo"
-        android:textColorHint="@color/hint"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/edit_titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Titulo"
+            android:textColorHint="@color/hint" />
 
-    <EditText
-        android:layout_gravity="top"
-        android:textColorHint="@color/hint"
-        android:hint="Descricão"
-        android:id="@+id/edit_descricao"
-        android:inputType="textCapSentences|textMultiLine"
-        android:minLines="3"
-        android:maxLines="20"
-        android:lines="4"
-        android:layout_width="match_parent"
-        android:layout_marginTop="50dp"
-        android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/edit_descricao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginTop="50dp"
+            android:hint="Descricão"
+            android:inputType="textCapSentences|textMultiLine"
+            android:lines="4"
+            android:maxLines="20"
+            android:minLines="3"
+            android:textColorHint="@color/hint" />
 
-    <!--<Button
+        <!--<Button
         android:layout_marginTop="5dp"
         android:id="@+id/button_data"
         android:layout_gravity="center"
@@ -53,9 +53,10 @@
         android:layout_height="wrap_content">
 
         <ImageButton
+            android:padding="5dp"
             android:id="@+id/button_data"
             android:layout_width="wrap_content"
-            android:background="@color/fundoButton"
+            android:background="@drawable/radius"
             android:layout_gravity="center"
             android:src="@drawable/calendario"
             android:layout_height="wrap_content"/>
@@ -70,9 +71,10 @@
             android:layout_height="wrap_content"/>-->
 
         <ImageButton
+            android:padding="5dp"
             android:id="@+id/button_save"
             android:layout_marginLeft="10dp"
-            android:background="@color/fundoButton"
+            android:background="@drawable/radius"
             android:layout_width="wrap_content"
             android:layout_gravity="center"
             android:src="@drawable/salvar"

@@ -60,4 +60,9 @@ public class Tarefa {
     public void setDataFinalizada(Long dataFinalizada) {
         DataFinalizada = dataFinalizada;
     }
+
+    public boolean isConluida(){
+        return DataFinalizada !=0;
+    }
+
 }
