@@ -3,21 +3,23 @@ package br.senai.sp.cotia.todolist.model;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import java.io.Serializable;
+
 @Entity
-public class Tarefa {
+public class Tarefa implements Serializable {
     @PrimaryKey(autoGenerate = true)
-    private Long id;
+    private long id;
     private String titulo;
     private String descricao;
-    private Long DataCricao;
-    private Long DataPrevista;
-    private Long DataFinalizada;
+    private long DataCricao;
+    private long DataPrevista;
+    private long DataFinalizada;
 
-    public Long getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -37,27 +39,27 @@ public class Tarefa {
         this.descricao = descricao;
     }
 
-    public Long getDataCricao() {
+    public long getDataCricao() {
         return DataCricao;
     }
 
-    public void setDataCricao(Long dataCricao) {
+    public void setDataCricao(long dataCricao) {
         DataCricao = dataCricao;
     }
 
-    public Long getDataPrevista() {
+    public long getDataPrevista() {
         return DataPrevista;
     }
 
-    public void setDataPrevista(Long dataPrevista) {
+    public void setDataPrevista(long dataPrevista) {
         DataPrevista = dataPrevista;
     }
 
-    public Long getDataFinalizada() {
+    public long getDataFinalizada() {
         return DataFinalizada;
     }
 
-    public void setDataFinalizada(Long dataFinalizada) {
+    public void setDataFinalizada(long dataFinalizada) {
         DataFinalizada = dataFinalizada;
     }
 

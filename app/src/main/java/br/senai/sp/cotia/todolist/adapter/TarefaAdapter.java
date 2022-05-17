@@ -1,6 +1,7 @@
 package br.senai.sp.cotia.todolist.adapter;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,10 +23,14 @@ public class TarefaAdapter extends RecyclerView.Adapter<TarefaAdapter.TarefaView
     //variável para o context
     private Context context;
 
+    //variavel do tipo OnTarefaClickListener
+    private OnTarefaClickListener listenerClickTarefa;
+
     //criar um construtor para receber os valores, que recebe uma lista de tarefas
-    public TarefaAdapter(List<Tarefa> lista, Context contexto){
+    public TarefaAdapter(List<Tarefa> lista, Context contexto, OnTarefaClickListener listener){
         this.tarefas = lista;
         this.context = contexto;
+        this.listenerClickTarefa = listener;
 
     }
 
@@ -56,6 +61,13 @@ public class TarefaAdapter extends RecyclerView.Adapter<TarefaAdapter.TarefaView
         }
         SimpleDateFormat formatador = new SimpleDateFormat("dd/MM/yyyy");
         holder.tvData.setText(formatador.format(t.getDataPrevista()));
+
+        holder.itemView.setOnClickListener(v ->{
+            //dispara o listener
+            listenerClickTarefa.onClick(v,t);
+
+        });
+
     }
 
     @Override
@@ -76,11 +88,16 @@ public class TarefaAdapter extends RecyclerView.Adapter<TarefaAdapter.TarefaView
         public TarefaViewHolder(View view){
             //chama o construtor da super classe
             super(view);
+
             //passar para as variáveis os componentes do xml
             tvTitulo = view.findViewById(R.id.text_titulo);
-            tvTitulo = view.findViewById(R.id.text_data);
-            tvTitulo = view.findViewById(R.id.text_status);
+            tvData = view.findViewById(R.id.text_data);
+            tvStatus = view.findViewById(R.id.text_status);
         }
 
+    }
+    //interface para o clique na tarefa
+    public interface OnTarefaClickListener{
+        void onClick(View view, Tarefa tarefa);
     }
 }

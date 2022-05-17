@@ -17,4 +17,5 @@
     <color name="radius">#023e7d</color>
     <color name="back_tarefa">#edf6f9</color>
     <color name="status_aberta">#ffba08</color>
+    <color name="hint2">#264653</color>
 </resources>

@@ -1,14 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".FragmentSub">
+    android:layout_height="match_parent">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
+        android:id="@+id/line_sub"
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content">
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/text_view_titulo2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/text_view_descricao"
+            android:layout_width="match_parent"
+            android:text="oiii"
+            android:layout_height="match_parent" />
+
+        <EditText
+            android:id="@+id/edit_descricao_sub"
+            android:layout_width="match_parent"
+            android:hint="Digite a subtarefa"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <ImageView
+        app:layout_constraintTop_toBottomOf="@id/line_sub"
+        android:src="@drawable/camera"
+        android:id="@+id/image_sub"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

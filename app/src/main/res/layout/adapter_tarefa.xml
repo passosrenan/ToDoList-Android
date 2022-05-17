@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="10dp"
     android:layout_margin="10dp"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <LinearLayout
         android:id="@+id/linear_tarefa"
@@ -14,14 +14,19 @@
         android:orientation="vertical">
 
         <TextView
+            android:padding="5dp"
             android:id="@+id/text_titulo"
             android:layout_width="match_parent"
             android:background="@color/back_tarefa"
+            android:textSize="15dp"
             android:layout_height="match_parent"
             android:text="Estudar Android"
             android:textColor="@color/cor_titulo" />
 
         <TextView
+            android:padding="5dp"
+            android:textSize="15dp"
+            android:layout_marginTop="7dp"
             android:background="@color/back_tarefa"
             android:id="@+id/text_data"
             android:layout_width="match_parent"
@@ -30,10 +35,12 @@
             android:textColor="@color/cor_titulo" />
 
         <TextView
+            android:layout_marginTop="7dp"
             android:id="@+id/text_status"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/cor_status"
+            android:textSize="15dp"
             android:gravity="center"
             android:padding="5dp"
             android:text="@string/status_tarefa"

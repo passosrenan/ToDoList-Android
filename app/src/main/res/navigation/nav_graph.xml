@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/fragmentInicio"
         android:name="br.senai.sp.cotia.todolist.fragment.FragmentInicio"
-        android:label="FragmentInicio" >
+        android:label="Todolist App" >
         <action
             android:id="@+id/action_fragmentInicio_to_fragmentCad"
             app:destination="@id/fragmentCad" />
